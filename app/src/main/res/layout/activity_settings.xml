@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:text="Time spent studying:"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/message"
+        android:id="@+id/timeEdit"
+        android:inputType="number"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:hint="Minutes you will study"/>
+    <TextView
+        android:id="@+id/scalerDiff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:text="How much weight should class difficulty have"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/message"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <SeekBar
+        android:id="@+id/sliderDiff"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/scalerDiff"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:min="1"
+        android:max="10"/>
+    <TextView
+        android:id="@+id/scalerGrade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:text="How much weight should test proximity have"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sliderDiff"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <SeekBar
+        android:id="@+id/sliderGrade"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/scalerGrade"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:min="1"
+        android:max="10"/>
+    <TextView
+        android:id="@+id/scalerTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:text="How much weight should proximity ot borderline have"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sliderGrade"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <SeekBar
+        android:id="@+id/sliderTest"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/scalerTest"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:min="1"
+        android:max="10"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/sliderTest"
+        android:text="UPDATE CLASS INFO"
+        android:onClick="updateInfo"/>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/navigation" />
+
+</android.support.constraint.ConstraintLayout>

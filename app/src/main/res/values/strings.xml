@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">SchedulrGuan</string>
+    <string name="title_Courses">Courses</string>
+    <string name="title_Schedule">Schedule</string>
+    <string name="title_Settings">Settings</string>
+    <string name="title_activity_course_one">COURSE ONE INFORMATION</string>
+    <string name="title_activity_course_two">COURSE TWO INFORMATION</string>
+    <string name="title_activity_course_three">COURSE THREE INFORMATION</string>
+    <string name="title_activity_course_four">COURSE FOUR INFORMATION</string>
+    <string name="title_activity_course_five">COURSE FIVE INFORMATION</string>
+    <string name="title_activity_course_six">COURSE SIX INFORMATION</string>
+    <string name="title_activity_course_add">ADD NEW COURSE</string>
+
+    <string-array name="course_options_arr">
+        <item>Course One</item>
+        <item>Course Two</item>
+        <item>Course Three</item>
+        <item>Course Four</item>
+        <item>Course Five</item>
+        <item>Course Six</item>
+    </string-array>
+
+    <string name="title_activity_schedule">ScheduleActivity</string>
+</resources>

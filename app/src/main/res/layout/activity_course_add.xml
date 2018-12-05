@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/classSixText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:text="Class Name:"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/classSixEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="16dp"
+        android:hint="Enter class name here"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/classSixText"
+        />
+
+
+    <TextView
+        android:id="@+id/gradeTextSix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Grade (percentage):"
+        app:layout_constraintTop_toBottomOf="@+id/classSixText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"/>
+
+    <EditText
+        android:id="@+id/gradeEditSix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/gradeTextSix"
+        android:hint="Enter grade here"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"/>
+
+    <TextView
+        android:id="@+id/difficultyTextSix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:text="Difficulty (1-easy 10-hard):"
+        app:layout_constraintTop_toBottomOf="@+id/gradeTextSix"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <SeekBar
+        android:id="@+id/difficultySliderSix"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="8dp"
+        android:max="10"
+        android:min="1"
+        app:layout_constraintBottom_toBottomOf="@+id/difficultyTextSix"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/difficultyTextSix" />
+
+    <TextView
+        android:id="@+id/testDateTextSix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/difficultySliderSix"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:text="Next Test Date"/>
+
+    <CalendarView
+        android:id="@+id/testDateCalendarSix"
+        android:layout_width="300dp"
+        android:layout_height="225dp"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/testDateTextSix" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/testDateCalendarSix"
+        android:text="add class"
+        android:onClick="updateInfo"/>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/navigation" />
+
+</android.support.constraint.ConstraintLayout>
+
