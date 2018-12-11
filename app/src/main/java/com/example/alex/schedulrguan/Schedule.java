@@ -71,8 +71,8 @@ public class Schedule {
         {
             times[i] = courseList.get(i).getPriority()/total;
             double temp = (double)studyTime * times[i];
-            temp = Math.round(temp);
-            message[i]= "" + courseList.get(i).get_courseName() + " ||| " + temp + " minutes";
+            temp = Math.round(temp / 7);
+            message[i]= "" + courseList.get(i).get_courseName() + " ||| " + temp + " minutes per day(" + courseList.get(i).getPriority() + " priority score)";
         }
         return message;
     }

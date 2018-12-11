@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -67,7 +68,7 @@ public class ScheduleActivity extends AppCompatActivity {
 
         String output = "";
 
-        int timeWanted = SettingsActivity.timeOfStudy;
+        int timeWanted = SettingsActivity.timeOfStudy * 60;
 
         /*for(int i = 0; i < courseList.size(); i++)
         {
@@ -118,6 +119,13 @@ public class ScheduleActivity extends AppCompatActivity {
         else
             courseOneOutputTextView.setText(outputs[0]);
     }
+
+    public void loadWeb(View view) {
+        Intent intentSchedActivity = new Intent(ScheduleActivity.this, WebviewActivity.class);
+        startActivity(intentSchedActivity);
+    }
+
+
 
     private void switchToCourse() {
         Intent intentSchedActivity = new Intent(ScheduleActivity.this, CourseActivity.class);

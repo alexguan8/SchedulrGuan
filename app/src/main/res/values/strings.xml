@@ -10,6 +10,7 @@
     <string name="title_activity_course_five">COURSE FIVE INFORMATION</string>
     <string name="title_activity_course_six">COURSE SIX INFORMATION</string>
     <string name="title_activity_course_add">ADD NEW COURSE</string>
+    <string name="title_activity_webview">Google Calendar WebView</string>
 
     <string-array name="course_options_arr">
         <item>Course One</item>

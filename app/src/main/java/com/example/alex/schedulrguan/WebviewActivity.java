@@ -7,15 +7,12 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.EditText;
 import android.widget.TextView;
 
-/**
- * Created by jshen on 12/18/2017.
- */
-
-public class SettingsActivity extends AppCompatActivity{
-    static int timeOfStudy;
+public class WebviewActivity extends AppCompatActivity{
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -30,7 +27,7 @@ public class SettingsActivity extends AppCompatActivity{
                     switchToSched();
                     return true;
                 case R.id.navigation_setting:
-
+                    switchToSettings();
                     return true;
             }
             return false;
@@ -40,31 +37,32 @@ public class SettingsActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings);
+        setContentView(R.layout.activity_webview);
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-    }
 
-    public void updateInfo(View V)
-    {
-        EditText minutesStudiedEditText =(EditText)findViewById(R.id.timeEdit);
-        int timeWanted = Integer.parseInt(minutesStudiedEditText.getText().toString());
-        timeOfStudy = timeWanted;
-
-        Intent intentSchedActivity = new Intent(SettingsActivity.this, ScheduleActivity.class);
-        startActivity(intentSchedActivity);
+        WebView webView = findViewById(R.id.webview);
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.setWebViewClient(new WebViewClient());
+        webView.loadUrl("https://calendar.google.com/calendar/r");
     }
 
     private void switchToCourse()
     {
-        Intent intentSchedActivity = new Intent(SettingsActivity.this, CourseActivity.class);
+        Intent intentSchedActivity = new Intent(WebviewActivity.this, CourseActivity.class);
         startActivity(intentSchedActivity);
     }
 
     private void switchToSched()
     {
-        Intent intentSchedActivity = new Intent(SettingsActivity.this, ScheduleActivity.class);
+        Intent intentSchedActivity = new Intent(WebviewActivity.this, ScheduleActivity.class);
+        startActivity(intentSchedActivity);
+    }
+
+    private void switchToSettings()
+    {
+        Intent intentSchedActivity = new Intent(WebviewActivity.this, SettingsActivity.class);
         startActivity(intentSchedActivity);
     }
 }

@@ -20,6 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="30dp"/>
+
         <TextView
             android:id="@+id/courseTwoOutputText"
             android:layout_width="match_parent"
@@ -47,11 +48,19 @@
             android:textSize="30dp"/>
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/gen_sched_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="testGenerate"
             android:text="Generate Schedule"
-            android:onClick="testGenerate"/>
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <Button
+            android:id="@+id/googleButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="loadWeb"
+            android:text="Add to Google Calendar" />
 
     </LinearLayout>
 
