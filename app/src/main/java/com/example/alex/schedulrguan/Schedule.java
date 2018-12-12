@@ -15,6 +15,10 @@ public class Schedule {
     private Course courseTwo = new Course("English", 78, 9, 1);
     private Course courseThree = new Course("Science", 87, 5, 4);*/
 
+    //for the pie chart
+    static double[] threeTimes = new double[3];
+    static String[] threeNames = new String[3];
+
 
     public Schedule() {
         this.name = "";
@@ -74,6 +78,15 @@ public class Schedule {
             temp = Math.round(temp / 7);
             message[i]= "" + courseList.get(i).get_courseName() + " ||| " + temp + " minutes per day(" + courseList.get(i).getPriority() + " priority score)";
         }
+
+        //for the pie chart
+        threeTimes[0] = times[0];
+        threeTimes[1] = times[1];
+        threeTimes[2] = times[2];
+
+        threeNames[0] = courseList.get(0).get_courseName();
+        threeNames[1] = courseList.get(1).get_courseName();
+        threeNames[2] = courseList.get(2).get_courseName();
         return message;
     }
 

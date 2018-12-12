@@ -13,6 +13,7 @@ import android.webkit.WebView;
 import android.widget.EditText;
 import android.widget.TextView;
 
+
 import java.util.ArrayList;
 
 public class ScheduleActivity extends AppCompatActivity {
@@ -57,6 +58,9 @@ public class ScheduleActivity extends AppCompatActivity {
 
     public void testGenerate(View V)
     {
+        if (sched.getArrayList() == null) {
+            return;
+        }
         ArrayList<Course> courseList = sched.getArrayList();
 
         TextView schedTextView = (TextView) findViewById(R.id.message);
@@ -69,7 +73,7 @@ public class ScheduleActivity extends AppCompatActivity {
 
         String output = "";
 
-        int timeWanted = SettingsActivity.timeOfStudy * 60;
+        int timeWanted = SettingsActivity.timeOfStudy;
 
         /*for(int i = 0; i < courseList.size(); i++)
         {
@@ -126,7 +130,10 @@ public class ScheduleActivity extends AppCompatActivity {
         startActivity(intentSchedActivity);
     }
 
-
+    public void loadPie(View view) {
+        Intent intentSchedActivity = new Intent(ScheduleActivity.this, PieActivity.class);
+        startActivity(intentSchedActivity);
+    }
 
     private void switchToCourse() {
         Intent intentSchedActivity = new Intent(ScheduleActivity.this, CourseActivity.class);

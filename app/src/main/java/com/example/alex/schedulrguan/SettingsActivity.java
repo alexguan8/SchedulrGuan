@@ -45,13 +45,18 @@ public class SettingsActivity extends AppCompatActivity{
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         navigation.setSelectedItemId(R.id.navigation_setting);
+
+        EditText t = findViewById(R.id.timeEdit);
+        if (timeOfStudy != 0) {
+            t.setText(Integer.toString(timeOfStudy), TextView.BufferType.EDITABLE);
+        }
     }
 
     public void updateInfo(View V)
     {
         EditText minutesStudiedEditText =(EditText)findViewById(R.id.timeEdit);
         int timeWanted = Integer.parseInt(minutesStudiedEditText.getText().toString());
-        timeOfStudy = timeWanted;
+        timeOfStudy = timeWanted * 60;
 
         Intent intentSchedActivity = new Intent(SettingsActivity.this, ScheduleActivity.class);
         startActivity(intentSchedActivity);

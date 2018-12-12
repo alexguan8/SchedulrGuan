@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SchedulrGuan</string>
+    <string name="app_name">StudySmart+</string>
     <string name="title_Courses">Courses</string>
     <string name="title_Schedule">Schedule</string>
     <string name="title_Settings">Settings</string>
@@ -10,7 +10,8 @@
     <string name="title_activity_course_five">COURSE FIVE INFORMATION</string>
     <string name="title_activity_course_six">COURSE SIX INFORMATION</string>
     <string name="title_activity_course_add">ADD NEW COURSE</string>
-    <string name="title_activity_webview">Google Calendar WebView</string>
+    <string name="title_activity_webview">GOOGLE CALENDAR WEBVIEW</string>
+    <string name="title_activity_pie">PIE CHART</string>
 
     <string-array name="course_options_arr">
         <item>Course One</item>

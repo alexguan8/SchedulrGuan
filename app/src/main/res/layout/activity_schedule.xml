@@ -19,33 +19,37 @@
             android:id="@+id/courseOneOutputText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="30dp"/>
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/courseTwoOutputText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="30dp"/>
+            android:textSize="18sp" />
+
         <TextView
             android:id="@+id/courseThreeOutputText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="30dp"/>
+            android:textSize="18sp" />
+
         <TextView
             android:id="@+id/courseFourOutputText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="30dp"/>
+            android:textSize="18sp" />
+
         <TextView
             android:id="@+id/courseFiveOutputText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="30dp"/>
+            android:textSize="18sp" />
+
         <TextView
             android:id="@+id/courseSixOutputText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="30dp"/>
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/gen_sched_button"
@@ -60,7 +64,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="loadWeb"
-            android:text="Add to Google Calendar" />
+            android:text="Add to Google Calendar"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <Button
+            android:id="@+id/pieButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="loadPie"
+            android:text="View Pie"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     </LinearLayout>
 
@@ -72,4 +85,3 @@
         android:background="?android:attr/windowBackground"
         app:menu="@menu/navigation" />
 </LinearLayout>
-
